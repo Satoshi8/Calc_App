@@ -16,27 +16,27 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        override fun onClick(v:View) {
+
             button1.setOnClickListener(this)
 
-           val editText1 = findViewById(R.id.editText1) as EditText
-            val editText2 = findViewById(R.id.editText2) as EditText
+        val editText1 = findViewById(R.id.editText1) as EditText
+        val editText2 = findViewById(R.id.editText2) as EditText
 
-            val str1 = editText1.getText().toString()
-             val str2 = editText2.getText().toString()
+        val str1 = editText1.getText().toString()
+        val str2 = editText2.getText().toString()
 
-          val num1 = Integer.parseInt(str1)
-            val num2 = Integer.parseInt(str2)
+        val num1 = Integer.parseInt(str1)
+        val num2 = Integer.parseInt(str2)
+        
 
-            val num3 = num1 + num2
+        val num3 = num1 + num2
             TextView textView1 = (TextView)findViewById(R.id.textView1)
-            val  str3 = String.valueOf(result)
+        val  str3 = String.valueOf(result)
             textView1.setText(str3)
         }
 
     }
 
-    button1.setOnClickListener(this)
     button2.setOnClickListener(this)
     button3.setOnClickListener(this)
     button4.setOnClickListener(this)
