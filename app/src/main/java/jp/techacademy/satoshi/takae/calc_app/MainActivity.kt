@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         setContentView(R.layout.activity_main)
 
             button1.setOnClickListener(this)
+        override fun onClick(v: View?) {
+
 
         val editText1 = findViewById(R.id.editText1) as EditText
         val editText2 = findViewById(R.id.editText2) as EditText
@@ -27,13 +29,14 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
         val num1 = Integer.parseInt(str1)
         val num2 = Integer.parseInt(str2)
-        
+
 
         val num3 = num1 + num2
             TextView textView1 = (TextView)findViewById(R.id.textView1)
         val  str3 = String.valueOf(result)
             textView1.setText(str3)
         }
+    }
 
     }
 
@@ -43,8 +46,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 }
 override fun onClick(v: View?){
     val intent = Intent(this,Main2Activity::class.java)
-    intent.putExtra("VALUE1",10)
-    intent.putExtra("VALUE2",20)
+    intent.putExtra("VALUE1")
+    intent.putExtra("VALUE2")
     startActivity(intent)
 
 }
