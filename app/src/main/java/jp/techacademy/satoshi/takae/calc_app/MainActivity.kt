@@ -7,6 +7,8 @@ import android.content.Intent
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
@@ -15,18 +17,20 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         override fun onClick(v:View) {
+            button1.setOnClickListener(this)
 
-            EditText editText1=(EditText)findViewById(R.id.editText1)
-            EditText editText2=(EditText)findViewById(R.id.editText2)
+           val editText1 = findViewById(R.id.editText1) as EditText
+            val editText2 = findViewById(R.id.editText2) as EditText
 
-            String str1 = editText1.getText().toString()
-            String str2 = editText2.getText().toString()
+            val str1 = editText1.getText().toString()
+             val str2 = editText2.getText().toString()
 
-            int num1 = Integer.parseInt(str1)
-            int num2 = Integer.parseInt(str2)
-            int result = num1 + num2
-            TextView textView1 = (TextView)findViewById(R.id.textView)
-            String str3 = String.valueOf(result)
+          val num1 = Integer.parseInt(str1)
+            val num2 = Integer.parseInt(str2)
+
+            val num3 = num1 + num2
+            TextView textView1 = (TextView)findViewById(R.id.textView1)
+            val  str3 = String.valueOf(result)
             textView1.setText(str3)
         }
 
