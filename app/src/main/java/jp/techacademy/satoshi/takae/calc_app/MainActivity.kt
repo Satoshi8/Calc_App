@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.content.Intent
 import android.widget.EditText
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -84,6 +85,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 intent.putExtra("result",num3)
                 intent.putExtra("result",num3)
                 startActivity(intent)
+            }else {
+                val view = findViewById<View>(android.R.id.content)
+                Snackbar.make(view,"数値を入力して下さい",Snackbar.LENGTH_LONG).show()
             }
         }
 }
