@@ -13,12 +13,12 @@ class Main2Activity : AppCompatActivity() {
         val value1 = intent.getDoubleExtra("VALUE1",0.0)
         val value2 = intent.getDoubleExtra("VALUE2",0.0)
 
-        private fun Result(){
+
 
         textView.text = "${value1 + value2}"
         textView.text = "${value1 - value2}"
         textView.text = "${value1 * value2}"
         textView.text = "${value1 / value2}"
-        }
+        
     }
 }
