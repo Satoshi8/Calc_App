@@ -27,14 +27,14 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                val num1 = Double.parseDouble(str1)
-                val num2 = Double.parseDouble(str2)
+                val num1 = str1.toDouble()
+                val num2 = str2.toDouble()
 
                 val num3 = num1 + num2
 
                 val intent = Intent(this,Main2Activity::class.java)
-                intent.putExtra("VALUE1",Result())
-                intent.putExtra("VALUE2",Result())
+                intent.putExtra("result",num3)
+                intent.putExtra("result",num3)
                 startActivity(intent)
             }else if(v.id == R.id.button2){
                 val editText1 = findViewById(R.id.editText1) as EditText
@@ -43,14 +43,14 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                val num1 = Double.parseDouble(str1)
-                val num2 = Double.parseDouble(str2)
+                val num1 = str1.toDouble()
+                val num2 = str2.toDouble()
 
                 val num3 = num1 - num2
 
                 val intent = Intent(this,Main2Activity::class.java)
-                intent.putExtra("VALUE1",Result())
-                intent.putExtra("VALUE2",Result())
+                intent.putExtra("result",num3)
+                intent.putExtra("result",num3)
                 startActivity(intent)
             }else if(v.id == R.id.button3) {
                 val editText1 = findViewById(R.id.editText1) as EditText
@@ -59,14 +59,14 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                val num1 = Double.parseDouble(str1)
-                val num2 = Double.parseDouble(str2)
+                val num1 = str1.toDouble()
+                val num2 = str2.toDouble()
 
                 val num3 = num1 * num2
 
                 val intent = Intent(this,Main2Activity::class.java)
-                intent.putExtra("VALUE1",Result())
-                intent.putExtra("VALUE2",Result())
+                intent.putExtra("result",num3)
+                intent.putExtra("result",num3)
                 startActivity(intent)
             }else if(v.id == R.id.button4){
                 val editText1 = findViewById(R.id.editText1) as EditText
@@ -75,16 +75,15 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                val num1 = Double.parseDouble(str1)
-                val num2 = Double.parseDouble(str2)
+                val num1 = str1.toDouble()
+                val num2 = str2.toDouble()
 
                 val num3 = num1 / num2
 
                 val intent = Intent(this,Main2Activity::class.java)
-                intent.putExtra("VALUE1",Result)
-                intent.putExtra("VALUE2",Result)
+                intent.putExtra("result",num3)
+                intent.putExtra("result",num3)
                 startActivity(intent)
             }
         }
-    val  Result
 }

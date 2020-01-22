@@ -10,15 +10,10 @@ class Main2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        val value1 = intent.getDoubleExtra("VALUE1",0.0)
-        val value2 = intent.getDoubleExtra("VALUE2",0.0)
+        val num3 = intent.getDoubleExtra("result",0.0)
 
 
+        textView.text = num3.toString()
 
-        textView.text = "${value1 + value2}"
-        textView.text = "${value1 - value2}"
-        textView.text = "${value1 * value2}"
-        textView.text = "${value1 / value2}"
-        
     }
 }
