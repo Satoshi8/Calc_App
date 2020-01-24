@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                         intent.putExtra("result", num3)
                         intent.putExtra("result", num3)
                         startActivity(intent)
-                    }else run {
+                    }else {
                             val view = findViewById<View>(android.R.id.content)
                             Snackbar.make(view, "数値を入力して下さい", Snackbar.LENGTH_LONG).show()
                         }
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                         intent.putExtra("result", num3)
                         intent.putExtra("result", num3)
                         startActivity(intent)
-                    }else run{
+                    }else {
                             val view = findViewById<View>(android.R.id.content)
                             Snackbar.make(view, "数値を入力して下さい", Snackbar.LENGTH_LONG).show()
                         }
@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                         intent.putExtra("result", num3)
                         intent.putExtra("result", num3)
                         startActivity(intent)
-                    }else  run{
+                    }else  {
                             val view = findViewById<View>(android.R.id.content)
                             Snackbar.make(view, "数値を入力して下さい", Snackbar.LENGTH_LONG).show()
                         }
