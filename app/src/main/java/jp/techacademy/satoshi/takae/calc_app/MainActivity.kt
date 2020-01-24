@@ -21,73 +21,96 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         button4.setOnClickListener(this)
     }
         override fun onClick(v: View) {
-            if (v.id == R.id.button1){
+                if ( v.id == R.id.button1) {
+                    val editText1 = findViewById(R.id.editText1) as EditText
+                    val editText2 = findViewById(R.id.editText2) as EditText
+
+                    val str1 = editText1.getText().toString()
+                    val str2 = editText2.getText().toString()
+                    if(v.id == R.id.button1) {
+                        val num1 = str1.toDouble()
+                        val num2 = str2.toDouble()
+
+                        val num3 = num1 + num2
+
+                        val intent = Intent(this, Main2Activity::class.java)
+                        intent.putExtra("result", num3)
+                        intent.putExtra("result", num3)
+                        startActivity(intent)
+                    }else {
+                            val view = findViewById<View>(android.R.id.content)
+                            Snackbar.make(view, "数値を入力して下さい", Snackbar.LENGTH_LONG).show()
+                        }
+
+                    }
+            else if(v.id == R.id.button2){
                 val editText1 = findViewById(R.id.editText1) as EditText
                 val editText2 = findViewById(R.id.editText2) as EditText
 
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                val num1 = str1.toDouble()
-                val num2 = str2.toDouble()
+                    if(v.id == R.id.button2) {
+                        val num1 = str1.toDouble()
+                        val num2 = str2.toDouble()
 
-                val num3 = num1 + num2
+                        val num3 = num1 - num2
 
-                val intent = Intent(this,Main2Activity::class.java)
-                intent.putExtra("result",num3)
-                intent.putExtra("result",num3)
-                startActivity(intent)
-            }else if(v.id == R.id.button2){
+                        val intent = Intent(this, Main2Activity::class.java)
+                        intent.putExtra("result", num3)
+                        intent.putExtra("result", num3)
+                        startActivity(intent)
+                    }else run {
+                            val view = findViewById<View>(android.R.id.content)
+                            Snackbar.make(view, "数値を入力して下さい", Snackbar.LENGTH_LONG).show()
+                        }
+
+                    }
+            else if(v.id == R.id.button3) {
                 val editText1 = findViewById(R.id.editText1) as EditText
                 val editText2 = findViewById(R.id.editText2) as EditText
 
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                val num1 = str1.toDouble()
-                val num2 = str2.toDouble()
+                    if(v.id == R.id.button3) {
+                        val num1 = str1.toDouble()
+                        val num2 = str2.toDouble()
 
-                val num3 = num1 - num2
+                        val num3 = num1 * num2
 
-                val intent = Intent(this,Main2Activity::class.java)
-                intent.putExtra("result",num3)
-                intent.putExtra("result",num3)
-                startActivity(intent)
-            }else if(v.id == R.id.button3) {
+                        val intent = Intent(this, Main2Activity::class.java)
+                        intent.putExtra("result", num3)
+                        intent.putExtra("result", num3)
+                        startActivity(intent)
+                    }else run{
+                            val view = findViewById<View>(android.R.id.content)
+                            Snackbar.make(view, "数値を入力して下さい", Snackbar.LENGTH_LONG).show()
+                        }
+
+                    }
+            else if(v.id == R.id.button4){
                 val editText1 = findViewById(R.id.editText1) as EditText
                 val editText2 = findViewById(R.id.editText2) as EditText
 
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                val num1 = str1.toDouble()
-                val num2 = str2.toDouble()
+                    if(v.id == R.id.button4) {
+                        val num1 = str1.toDouble()
+                        val num2 = str2.toDouble()
 
-                val num3 = num1 * num2
+                        val num3 = num1 / num2
 
-                val intent = Intent(this,Main2Activity::class.java)
-                intent.putExtra("result",num3)
-                intent.putExtra("result",num3)
-                startActivity(intent)
-            }else if(v.id == R.id.button4){
-                val editText1 = findViewById(R.id.editText1) as EditText
-                val editText2 = findViewById(R.id.editText2) as EditText
+                        val intent = Intent(this, Main2Activity::class.java)
+                        intent.putExtra("result", num3)
+                        intent.putExtra("result", num3)
+                        startActivity(intent)
+                    }else  run{
+                            val view = findViewById<View>(android.R.id.content)
+                            Snackbar.make(view, "数値を入力して下さい", Snackbar.LENGTH_LONG).show()
+                        }
 
-                val str1 = editText1.getText().toString()
-                val str2 = editText2.getText().toString()
-
-                val num1 = str1.toDouble()
-                val num2 = str2.toDouble()
-
-                val num3 = num1 / num2
-
-                val intent = Intent(this,Main2Activity::class.java)
-                intent.putExtra("result",num3)
-                intent.putExtra("result",num3)
-                startActivity(intent)
-            }else {
-                val view = findViewById<View>(android.R.id.content)
-                Snackbar.make(view,"数値を入力して下さい",Snackbar.LENGTH_LONG).show()
+                    }
             }
         }
-}
