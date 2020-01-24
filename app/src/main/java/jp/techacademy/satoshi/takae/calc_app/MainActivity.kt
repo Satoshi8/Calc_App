@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
                     val str1 = editText1.getText().toString()
                     val str2 = editText2.getText().toString()
-                    if(v.id == R.id.button1) {
+                    if(str1.isNotEmpty() && str2.isNotEmpty()) {
                         val num1 = str1.toDouble()
                         val num2 = str2.toDouble()
 
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                    if(v.id == R.id.button2) {
+                    if(str1.isNotEmpty() && str2.isNotEmpty()) {
                         val num1 = str1.toDouble()
                         val num2 = str2.toDouble()
 
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                    if(v.id == R.id.button3) {
+                    if(str1.isNotEmpty() && str2.isNotEmpty()) {
                         val num1 = str1.toDouble()
                         val num2 = str2.toDouble()
 
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 val str1 = editText1.getText().toString()
                 val str2 = editText2.getText().toString()
 
-                    if(v.id == R.id.button4) {
+                    if(str1.isNotEmpty() && str2.isNotEmpty()) {
                         val num1 = str1.toDouble()
                         val num2 = str2.toDouble()
 
